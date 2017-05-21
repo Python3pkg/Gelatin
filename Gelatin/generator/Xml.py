@@ -33,7 +33,7 @@ class Xml(Builder):
         return etree.tostring(self.etree, encoding='unicode', pretty_print=True)
 
     def dump(self):
-        print(self.serialize())
+        print((self.serialize()))
 
     def _splittag(self, path):
         tag, attribs = Builder._splittag(self, path)

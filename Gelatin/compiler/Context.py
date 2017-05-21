@@ -211,7 +211,7 @@ class Context(object):
         return output
 
     def _msg(self, error):
-        print(self._format(error))
+        print((self._format(error)))
 
     def _warn(self, error):
         sys.stderr.write(self._format(error) + '\n')
@@ -236,5 +236,5 @@ class Context(object):
             return self.parse_string(input_file.read(), builder)
 
     def dump(self):
-        for grammar in self.grammars.values():
+        for grammar in list(self.grammars.values()):
             print(grammar)

@@ -45,8 +45,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Gelatin'
-copyright = u'2017, Samuel Abels'
+project = 'Gelatin'
+copyright = '2017, Samuel Abels'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -188,8 +188,8 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'Gelatin.tex', u'Gelatin Documentation',
-   u'Samuel Abels', 'manual'),
+  ('index', 'Gelatin.tex', 'Gelatin Documentation',
+   'Samuel Abels', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -218,8 +218,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'gelatin', u'Gelatin Documentation',
-     [u'Samuel Abels'], 1)
+    ('index', 'gelatin', 'Gelatin Documentation',
+     ['Samuel Abels'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -232,8 +232,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'Gelatin', u'Gelatin Documentation',
-   u'Samuel Abels', 'Gelatin', 'One line description of project.',
+  ('index', 'Gelatin', 'Gelatin Documentation',
+   'Samuel Abels', 'Gelatin', 'One line description of project.',
    'Miscellaneous'),
 ]
 
@@ -250,10 +250,10 @@ texinfo_documents = [
 # -- Options for Epub output ---------------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = u'Gelatin'
-epub_author = u'Samuel Abels'
-epub_publisher = u'Samuel Abels'
-epub_copyright = u'2017, Samuel Abels'
+epub_title = 'Gelatin'
+epub_author = 'Samuel Abels'
+epub_publisher = 'Samuel Abels'
+epub_copyright = '2017, Samuel Abels'
 
 # The language of the text. It defaults to the language option
 # or en if the language is not set.

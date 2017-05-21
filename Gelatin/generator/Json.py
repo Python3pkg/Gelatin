@@ -17,7 +17,7 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
-import json
+from . import json
 from collections import OrderedDict, Callable, defaultdict
 from .Builder import Builder
 from pprint import PrettyPrinter
@@ -49,7 +49,7 @@ class OrderedDefaultDict(OrderedDict):
             args = tuple()
         else:
             args = self.default_factory,
-        return type(self), args, None, None, self.items()
+        return type(self), args, None, None, list(self.items())
 
     def copy(self):
         return self.__copy__()
@@ -60,7 +60,7 @@ class OrderedDefaultDict(OrderedDict):
     def __deepcopy__(self, memo):
         import copy
         return type(self)(self.default_factory,
-                          copy.deepcopy(self.items()))
+                          copy.deepcopy(list(self.items())))
 
     def __repr__(self):
         return 'OrderedDefaultDict(%s, %s)' % (self.default_factory,
@@ -97,7 +97,7 @@ class Node(object):
     def to_dict(self):
         thedict = OrderedDict(('@' + k, v) for (k, v) in self.attribs)
         children_dict = OrderedDict()
-        for name, child_list in self.children.items():
+        for name, child_list in list(self.children.items()):
             if len(child_list) == 1:
                 children_dict[name] = child_list[0].to_dict()
                 continue
@@ -108,7 +108,7 @@ class Node(object):
         return thedict
 
     def dump(self, indent=0):
-        for name, children in self.children.items():
+        for name, children in list(self.children.items()):
             for child in children:
                 child.dump(indent + 1)
 

@@ -62,7 +62,7 @@ class Builder(object):
     def _splittag(self, tag):
         url = urlparse(tag)
         attribs = []
-        for key, value in parse_qs(url.query).items():
+        for key, value in list(parse_qs(url.query).items()):
             value = value[0]
             if value.startswith('"') and value.endswith('"'):
                 value = value[1:-1]

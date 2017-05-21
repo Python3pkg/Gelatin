@@ -37,7 +37,7 @@ def _format(buffer, end, msg):
 
 
 def say(buffer, end, msg):
-    print(_format(buffer, end, msg))
+    print((_format(buffer, end, msg)))
 
 
 def error(buffer, end, msg='Syntax error'):
